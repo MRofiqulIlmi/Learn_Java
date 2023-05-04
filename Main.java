@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
 
 enum Gender{
   MALE,
@@ -420,7 +422,76 @@ public class Main {
     System.out.println(formattedDate);
     */
 
-   
+    //Array List
+    ArrayList<String> cars = new ArrayList<String>();
+
+    cars.add("ZBMW");
+    cars.add("Volvo");
+
+    String tempCar = cars.get(0);
+
+    System.out.println("initiate");
+    System.out.println(cars);
+    
+    cars.set(1, "Toyota");
+
+    cars.add("Hyundai");
+
+    System.out.println("after set and add");
+    System.out.println(cars);
+    System.out.println(tempCar);
+    System.out.println("cars Size");
+    System.out.println(cars.size());
+  
+    System.out.println("after remove");
+    cars.remove(1);
+
+    System.out.println(cars);
+
+    for(int i=0; i<cars.size();i++){
+      System.out.println("mobil " + i + " : " + cars.get(i));
+    }
+
+    Collections.sort(cars);
+
+    System.out.println("setelah Sort");
+
+    for(int i=0; i<cars.size();i++){
+      System.out.println("mobil " + i + " : " + cars.get(i));
+    }
+
+    System.out.println("after clear");
+    cars.clear();
+    System.out.println(cars);
+
+
+    ArrayList<Boolean> code = new ArrayList<Boolean>();
+
+    code.add(true);
+    code.add(false);
+
+    for(Boolean i : code){
+      System.out.println("this " +i);
+    }
+
+    ArrayList<Integer> theNum = new ArrayList<Integer>();
+
+    theNum.add(23);
+    theNum.add(90);
+    theNum.add(20);
+
+    for(int i : theNum){
+      System.out.println(i);
+    }
+
+    Collections.sort(theNum);
+
+    System.out.println("setelah sort");
+
+    for(int i : theNum){
+      System.out.println(i);
+    }
+    
 
 
   }
