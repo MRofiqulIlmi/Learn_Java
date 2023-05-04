@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 
 enum Gender{
   MALE,
@@ -422,6 +423,7 @@ public class Main {
     System.out.println(formattedDate);
     */
 
+    /*
     //Array List
     ArrayList<String> cars = new ArrayList<String>();
 
@@ -492,6 +494,49 @@ public class Main {
       System.out.println(i);
     }
     
+    */
+
+   LinkedList<String> Animal = new LinkedList<String>();
+
+   Animal.add("Wolf");
+   Animal.add("Bird");
+
+   System.out.println(Animal);
+
+   Animal.addFirst("Tiger");
+   Animal.addLast("Cat");
+
+   System.out.println(Animal);
+
+   for(String i : Animal){
+    System.out.println("This Animal List : " + i);
+   }
+
+   Collections.sort(Animal);
+
+   for(String i : Animal){
+    System.out.println("Animal after sort : " + i);
+   }
+
+   System.out.println("this the size of Animal " + Animal.size());
+
+   System.out.println("this the 1st item : " + Animal.getFirst());
+
+   System.out.println("this the 2nd item : " + Animal.get(1));
+
+   System.out.println("this the last item : " + Animal.getLast());
+
+
+   Animal.remove(2);
+
+   System.out.println(Animal);
+
+   Animal.removeFirst();
+   System.out.println(Animal);
+
+   Animal.removeLast();
+   System.out.println(Animal);
+
 
 
   }
