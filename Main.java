@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.HashMap;
 
 enum Gender{
   MALE,
@@ -494,7 +495,7 @@ public class Main {
       System.out.println(i);
     }
     
-    */
+    
 
    LinkedList<String> Animal = new LinkedList<String>();
 
@@ -537,7 +538,58 @@ public class Main {
    Animal.removeLast();
    System.out.println(Animal);
 
+  */
 
+  HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+  //The First arg is key, and the second is value
+
+  capitalCities.put("Indonesia","Jakarta");
+  capitalCities.put("England", "London");
+  capitalCities.put("Japan", "Tokyo");
+  System.out.println(capitalCities);
+
+  capitalCities.get("Indonesia");
+  System.out.println(capitalCities.get("Indonesia"));
+
+  String capitalOfEngland = capitalCities.get("England");
+  System.out.println("England capital city is " + capitalOfEngland);
+
+  int sizeOfCapitalCities = capitalCities.size();
+  System.out.println("size of capitalcities is " + sizeOfCapitalCities);
+
+  for(String i : capitalCities.keySet()){
+    System.out.println("this the key set " + i + " and this is the value " + capitalCities.get(i));
+  }
+
+  for(String i : capitalCities.values()){
+    System.out.println("this the values " + i);
+  }
+
+
+
+  capitalCities.remove("Japan");
+  System.out.println(capitalCities);
+  sizeOfCapitalCities = capitalCities.size();
+  System.out.println("size of capitalcities is " + sizeOfCapitalCities);
+
+  capitalCities.clear();
+  System.out.println(capitalCities);
+
+
+
+  //the type when create hashmap must be a object (String, Integer, Boolean) not a primitive type like int
+
+  HashMap<String, Integer> ageObject = new HashMap<String, Integer>();
+
+  ageObject.put("Andi", 20);
+  ageObject.put("Rere", 22);
+  ageObject.put("Morgan", 30);
+
+
+  for(String i : ageObject.keySet()){
+    System.out.println("name : " + i + " his/her age is " + ageObject.get(i));
+  }
 
   }
 }
