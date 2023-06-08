@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 enum Gender{
   MALE,
@@ -540,6 +541,8 @@ public class Main {
 
   */
 
+ /*
+
   HashMap<String, String> capitalCities = new HashMap<String, String>();
 
   //The First arg is key, and the second is value
@@ -590,6 +593,52 @@ public class Main {
   for(String i : ageObject.keySet()){
     System.out.println("name : " + i + " his/her age is " + ageObject.get(i));
   }
+
+
+  */
+
+
+  //Hashset
+
+  HashSet<String> myNeighbour = new HashSet<String>();
+
+  myNeighbour.add("udin");
+  myNeighbour.add("arif");
+  myNeighbour.add("malik");
+  myNeighbour.add("siti");
+
+  System.out.println(myNeighbour);
+
+  System.out.println(myNeighbour.contains("siti"));
+  System.out.println(myNeighbour.contains("siti a"));
+
+  myNeighbour.remove("malik");
+  System.out.println(myNeighbour.size());
+  System.out.println(myNeighbour);
+
+  for(String i : myNeighbour){
+    System.out.println("my Neighbour " + i);
+  }
+
+  myNeighbour.clear();
+  System.out.println(myNeighbour);
+
+
+  HashSet<Integer> myNum = new HashSet<Integer>();
+
+  myNum.add(2);
+  myNum.add(4);
+  myNum.add(7);
+
+  for(int i=0; i<10; i++){
+    if(myNum.contains(i)){
+      System.out.println(i + " terdapat pada list");
+    }else{
+      System.out.println(i + " TIDAK terdapat pada list");
+
+    }
+  }
+
 
   }
 }
