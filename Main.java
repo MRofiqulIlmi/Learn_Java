@@ -641,6 +641,8 @@ public class Main {
   }
   */
 
+
+  /*
   //Iterator
 
   ArrayList<String> cart = new ArrayList<String>();
@@ -677,11 +679,29 @@ public class Main {
 
 
   
+    */
 
+   //Java Wrapper Class
 
+   int primInt = 4;
+   Integer classInt = 5;
 
+   System.out.println(primInt);
+   System.out.println(classInt);
 
+  //Invalid
+  //ArrayList<int> primIntList = new ArrayList<int>(); 
 
+  //valid
+  ArrayList<Integer> wrapClassIntList = new ArrayList<Integer>(); 
+
+  System.out.println(classInt.intValue());
+
+  String classIntToStr = classInt.toString();
+
+  System.out.println(classIntToStr);
+  System.out.println(classIntToStr.length());
+  
 
   }
 }
