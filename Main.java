@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 enum Gender{
   MALE,
@@ -597,7 +598,7 @@ public class Main {
 
   */
 
-
+  /*
   //Hashset
 
   HashSet<String> myNeighbour = new HashSet<String>();
@@ -638,6 +639,48 @@ public class Main {
 
     }
   }
+  */
+
+  //Iterator
+
+  ArrayList<String> cart = new ArrayList<String>();
+
+  cart.add("sayur sawi");
+  cart.add("buah apel");
+  cart.add("buah mangga");
+  cart.add("buah pisang");
+  cart.add("buah lemon");
+
+  System.out.println(cart);
+
+  Iterator<String> iter = cart.iterator();
+
+  System.out.println(iter);
+  System.out.println(iter.next());
+  // System.out.println(iter.next());
+
+  System.out.println("menuju loop");
+  
+  while(iter.hasNext()){
+
+    String namaBuah = iter.next();
+    System.out.println(namaBuah);
+
+    if(namaBuah.length() <= 9){
+      iter.remove();
+    }
+
+  }
+
+  System.out.println(cart);
+
+
+
+  
+
+
+
+
 
 
   }
