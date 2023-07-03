@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 enum Gender{
   MALE,
@@ -714,6 +716,7 @@ public class Main {
   
   */
 
+ /*
  //Try Catch
 
   // int[] myNum = {2,3,4,5};
@@ -735,6 +738,51 @@ public class Main {
   checkAge(60);
 
   checkAge(10);
+  */
+
+//  Pattern pattern = Pattern.compile("nama saya", Pattern.CASE_INSENSITIVE);
+//  Pattern pattern = Pattern.compile("[z]", Pattern.CASE_INSENSITIVE);
+Pattern pattern = Pattern.compile("[nama]{1,6}", Pattern.CASE_INSENSITIVE);
+
+
+//the first argument is pattern that will compare or search
+// BRACKET use for find a range of characters
+    // [abc] find one character from the options between the brackets
+    // [^abc] find one character NOT between the brackets
+    // [0-9] find one character from the range 0 to 9
+// METACHARACTERS are character with a special meaning
+    // | like or
+    // . find just one
+    // ^ beginning of a string
+    // $ ending of a string
+    // \d find digit
+    // \s find a whitespace
+    // \b beginning or ending of a word \bWORD or WORD\b
+    // \_uxxxx find the unicode character specified by the hexadecimal number xxxx
+// QUANTIFIERS define quantities
+    // n+ matches any string that contains at least one n
+    // n* matches any string that contains zero or more occurrences of n
+    // n? matches any string that contains zero or one occurences of n
+    // n{x} matches any string taht contains a seq of X n's
+    // n{x,y} matches any string that contains a seq of X to Y n's
+    // n{x,} matches any string that contains a seq of at least X n's
+
+
+
+//the second argument is optional, is for flagging which type of search will perform
+// several kind on it is : CASE_INSENSITIVE, LITERAL, UNICODE_CASE
+
+
+ Matcher matcher = pattern.matcher("siapa nama saya? nama");
+ boolean matchFound = matcher.find();
+
+ if(matchFound){
+  System.out.println("match found");
+ }else{
+  System.out.println("Match not found");
+ }
+
+
 
 
   }
