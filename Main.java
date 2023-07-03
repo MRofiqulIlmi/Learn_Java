@@ -68,6 +68,14 @@ public class Main {
       System.out.println("coba yg public func");
     }
 
+    static void checkAge(int age){
+    if(age < 18){
+      throw new ArithmeticException("Access Denied - your age must be older than 18");
+    }else{
+      System.out.println("your access Granted");
+    }
+  }
+
 
   public static void main(String[] args) {
     // System.out.println("Hello World");
@@ -681,6 +689,8 @@ public class Main {
   
     */
 
+   /*
+
    //Java Wrapper Class
 
    int primInt = 4;
@@ -702,6 +712,30 @@ public class Main {
   System.out.println(classIntToStr);
   System.out.println(classIntToStr.length());
   
+  */
+
+ //Try Catch
+
+  // int[] myNum = {2,3,4,5};
+  // System.out.println(myNum[10]);
+
+  // try{
+  //   int[] myNum = {2,3,4,5};
+  //   System.out.println(myNum[10]);
+  // }
+  // catch(Exception e){
+  //   System.out.println("Something went wrong");
+  // }
+  // finally{
+  //   System.out.println("the try catch is done");
+  // }
+
+  
+
+  checkAge(60);
+
+  checkAge(10);
+
 
   }
 }
