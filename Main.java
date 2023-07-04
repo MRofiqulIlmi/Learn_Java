@@ -15,10 +15,15 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.function.Consumer;
 
 enum Gender{
   MALE,
   FEMALE
+}
+
+interface StringFunction{
+  String run(String str);
 }
 
 
@@ -77,6 +82,11 @@ public class Main {
       System.out.println("your access Granted");
     }
   }
+
+    public static void printFormatted(String str, StringFunction format){
+      String result = format.run(str);
+      System.out.println(result);
+    }
 
 
   public static void main(String[] args) {
@@ -740,6 +750,10 @@ public class Main {
   checkAge(10);
   */
 
+
+/*
+ //REGEX
+
 //  Pattern pattern = Pattern.compile("nama saya", Pattern.CASE_INSENSITIVE);
 //  Pattern pattern = Pattern.compile("[z]", Pattern.CASE_INSENSITIVE);
 Pattern pattern = Pattern.compile("[nama]{1,6}", Pattern.CASE_INSENSITIVE);
@@ -782,7 +796,30 @@ Pattern pattern = Pattern.compile("[nama]{1,6}", Pattern.CASE_INSENSITIVE);
   System.out.println("Match not found");
  }
 
+*/
 
+//Lambda expression
+
+  ArrayList<Integer> myNumber = new ArrayList();
+  myNumber.add(2);
+  myNumber.add(4);
+  myNumber.add(7);
+  myNumber.add(9);
+
+  myNumber.forEach((item) -> {
+    System.out.println("myNumber is " + item);
+  });
+
+  Consumer<Integer> printNumOnlyMethod = (num) -> {System.out.println(num);};
+
+  myNumber.forEach(printNumOnlyMethod);
+
+
+  StringFunction exclaim = (s) -> s + '!';
+  StringFunction ask = (s) -> s + '?';
+
+  printFormatted("heii", exclaim);
+  printFormatted("heii", ask);
 
 
   }
